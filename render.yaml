@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: mixxgroup
+    runtime: static
+    buildCommand: mkdir -p public && cp index.html public/index.html
+    staticPublishPath: ./public
