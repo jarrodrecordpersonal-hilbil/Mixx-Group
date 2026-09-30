@@ -28,3 +28,8 @@
 .tank-asset.featured span{color:rgba(17,17,17,.65)}
 @media(max-width:800px){.tank-assets-head{grid-template-columns:1fr}.tank-asset-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.tank-assets{padding:1.25rem;border-radius:20px}.tank-asset-grid{grid-template-columns:1fr}.tank-asset{min-height:145px}}
+
+.tank-asset.has-logo{background:#f6ead2;color:#111;align-items:flex-start;transition:transform .2s ease,box-shadow .2s ease}
+.tank-asset.has-logo:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.tank-asset.has-logo .program-logo{display:block;width:min(100%,280px);height:98px;object-fit:contain;object-position:left center}
+.tank-asset.has-logo span{color:rgba(17,17,17,.65)}
