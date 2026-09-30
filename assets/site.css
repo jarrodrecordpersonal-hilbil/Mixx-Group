@@ -55,3 +55,8 @@
 .tank-support strong{max-width:310px}
 @media(max-width:1050px){.tank-core-grid{grid-template-columns:1fr 1fr}.tank-support{grid-template-columns:1fr;align-items:start}}
 @media(max-width:600px){.tank-core-grid,.tank-support-grid{grid-template-columns:1fr}.tank-core-grid .tank-asset{min-height:165px}.tank-support{min-height:150px}.tank-core-grid .tank-asset.has-logo .program-logo{height:88px}}
+
+.brand-card.games .og-games-logo{filter:invert(1);opacity:.98;width:min(100%,410px)}
+.brand-card.sway .card-center{margin:28px 4px;padding:24px 28px;background:rgba(246,244,236,.96);border-radius:18px}
+.brand-card.sway .sway-logo{max-width:100%;max-height:165px}
+@media(max-width:600px){.brand-card.sway .card-center{margin:22px 0;padding:18px}}
