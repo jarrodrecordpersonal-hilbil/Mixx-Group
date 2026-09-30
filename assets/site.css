@@ -63,3 +63,16 @@
 
 .hero-system-logo.bourbon-games-og{width:min(560px,82%);padding:28px 42px;max-height:240px;object-fit:contain}
 @media(max-width:600px){.hero-system-logo.bourbon-games-og{padding:22px 26px}}
+
+.group-tentpole{margin-top:12px;min-height:285px;border-radius:22px;padding:28px;display:grid;grid-template-columns:minmax(300px,.8fr) minmax(0,1.2fr);gap:42px;align-items:stretch;background:#111;color:#fff;text-decoration:none;overflow:hidden;transition:transform .25s ease}
+.group-tentpole:hover{transform:translateY(-4px)}
+.group-tentpole-mark{padding:24px 30px;border-radius:18px;background:#f6ead2;color:#111;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.group-tentpole-mark img{display:block;width:min(100%,310px);height:145px;object-fit:contain;object-position:left center}
+.group-tentpole-copy{padding:14px 14px 10px 0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.group-tentpole-copy .kicker{color:rgba(255,255,255,.48)}
+.group-tentpole-copy h3{margin:16px 0 12px;font-family:var(--serif);font-size:clamp(2.2rem,4vw,4rem);line-height:.95;letter-spacing:-.045em;font-weight:400;max-width:720px}
+.group-tentpole-copy p{margin:0;color:rgba(255,255,255,.65);line-height:1.55;max-width:700px}
+.group-tentpole-link{margin-top:24px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:4px}
+.tank-core-grid .tank-asset.has-logo .spirit-makers-logo{max-width:235px;padding-inline:8px}
+@media(max-width:800px){.group-tentpole{grid-template-columns:1fr;gap:20px}.group-tentpole-copy{padding:8px 4px}.group-tentpole-mark img{height:112px}}
+@media(max-width:520px){.group-tentpole{padding:18px}.group-tentpole-mark{padding:20px}.group-tentpole-copy h3{font-size:2.35rem}}
