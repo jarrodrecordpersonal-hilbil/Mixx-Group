@@ -41,3 +41,17 @@
 .tank-special h3{margin:0 0 .65rem;font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.6rem);line-height:1;letter-spacing:-.035em;font-weight:400}
 .tank-special p{margin:0;color:rgba(17,17,17,.68);line-height:1.55;max-width:650px}
 @media(max-width:700px){.tank-special{grid-template-columns:1fr;gap:1.25rem}.tank-special-mark img{height:90px}}
+
+.tank-program-group+.tank-program-group{margin-top:1.6rem}
+.tank-group-label{display:block;margin:0 0 .8rem;color:rgba(255,255,255,.52)}
+.tank-core-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.tank-core-grid .tank-asset{min-height:215px}
+.tank-core-grid .tank-asset.has-logo{align-items:stretch}
+.tank-core-grid .tank-asset.has-logo .program-logo{width:100%;max-width:260px;height:105px;object-position:center center;margin-inline:auto}
+.tank-support-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.tank-support{min-height:145px;display:grid;grid-template-columns:minmax(170px,.8fr) minmax(0,1.2fr);gap:1.5rem;align-items:end}
+.tank-support>div{display:flex;flex-direction:column;gap:.65rem}
+.tank-support-type{font-size:.66rem!important;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42)!important}
+.tank-support strong{max-width:310px}
+@media(max-width:1050px){.tank-core-grid{grid-template-columns:1fr 1fr}.tank-support{grid-template-columns:1fr;align-items:start}}
+@media(max-width:600px){.tank-core-grid,.tank-support-grid{grid-template-columns:1fr}.tank-core-grid .tank-asset{min-height:165px}.tank-support{min-height:150px}.tank-core-grid .tank-asset.has-logo .program-logo{height:88px}}
