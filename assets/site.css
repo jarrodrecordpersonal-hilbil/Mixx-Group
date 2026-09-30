@@ -11,3 +11,20 @@
 /* Connected identity system */
 .group-mark{display:block;width:178px;font-size:0;letter-spacing:0}.group-mark img{display:block;width:100%;height:auto}.card-center .system-logo{width:82%;max-width:470px;max-height:none}.light-panel{background:#f3f0e8;border-radius:14px;padding:10px 14px}.brand-art .hero-system-logo{position:relative;z-index:1;width:560px;max-width:82%;max-height:none;background:#f3f0e8;border-radius:18px;padding:12px 16px}.system-hub>img{display:block;width:220px;filter:invert(1) grayscale(1) brightness(4)}.door-logo{display:block;width:min(390px,85%);height:auto;margin:25px 0 10px}.door-logo-panel{display:block;background:#f3f0e8;border-radius:14px;padding:3px 10px;width:min(430px,90%);margin:25px 0 10px}.door-logo-panel .door-logo{width:100%;margin:0}.product-logo{display:block;width:min(390px,75%);height:auto;margin:0 0 20px}
 @media(max-width:560px){.group-mark{width:145px}.card-center .system-logo{width:96%}.system-hub>img{width:190px}.door-logo,.door-logo-panel{width:100%}.product-logo{width:86%}}
+
+
+/* Original Bourbon Games artwork and MIXX TANK asset library */
+.og-games-logo{display:block;width:min(100%,430px);max-height:230px;object-fit:contain;margin:auto}
+.tank-assets{margin:clamp(3rem,8vw,7rem) 0;padding:clamp(2rem,5vw,4rem);background:#111;color:#fff;border-radius:28px}
+.tank-assets-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);gap:1.5rem;align-items:end;margin-bottom:2rem}
+.tank-assets-head h2{margin:.55rem 0 0;font-size:clamp(2rem,5vw,4.5rem);line-height:.92;letter-spacing:-.05em}
+.tank-assets-head p{margin:0;color:rgba(255,255,255,.7);font-size:1rem;line-height:1.6}
+.tank-asset-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.tank-asset{min-height:180px;padding:1.4rem;border:1px solid rgba(255,255,255,.16);border-radius:20px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;text-decoration:none;background:rgba(255,255,255,.04)}
+.tank-asset strong{font-size:clamp(1.25rem,2.2vw,2rem);line-height:1}
+.tank-asset span{color:rgba(255,255,255,.65);line-height:1.45}
+.tank-asset.featured{background:#f6ead2;color:#111;align-items:flex-start}
+.tank-asset.featured img{width:min(100%,260px);height:95px;object-fit:contain;object-position:left center}
+.tank-asset.featured span{color:rgba(17,17,17,.65)}
+@media(max-width:800px){.tank-assets-head{grid-template-columns:1fr}.tank-asset-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tank-assets{padding:1.25rem;border-radius:20px}.tank-asset-grid{grid-template-columns:1fr}.tank-asset{min-height:145px}}
