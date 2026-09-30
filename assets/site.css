@@ -60,3 +60,6 @@
 .brand-card.sway .card-center{margin:28px 4px;padding:24px 28px;background:rgba(246,244,236,.96);border-radius:18px}
 .brand-card.sway .sway-logo{max-width:100%;max-height:165px}
 @media(max-width:600px){.brand-card.sway .card-center{margin:22px 0;padding:18px}}
+
+.hero-system-logo.bourbon-games-og{width:min(560px,82%);padding:28px 42px;max-height:240px;object-fit:contain}
+@media(max-width:600px){.hero-system-logo.bourbon-games-og{padding:22px 26px}}
