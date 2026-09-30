@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220">
+  <defs><linearGradient id="v" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6e5cff"/><stop offset="1" stop-color="#57d8ff"/></linearGradient></defs>
+  <g transform="translate(18 28)">
+    <circle cx="78" cy="82" r="68" fill="#17152d"/>
+    <path d="M28 84h25l12-26 19 51 18-39 11 14h17" fill="none" stroke="url(#v)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="130" cy="84" r="7" fill="#cbff7d"/>
+  </g>
+  <text x="190" y="126" fill="#111612" font-family="Nimbus Sans,Arial,sans-serif" font-size="89" font-weight="900" letter-spacing="-6">MIXX</text>
+  <text x="430" y="111" fill="#332d78" font-family="Nimbus Sans,Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="8">VIBE</text>
+  <path d="M432 132H788" stroke="url(#v)" stroke-width="4"/>
+  <circle cx="788" cy="132" r="7" fill="#cbff7d"/>
+</svg>

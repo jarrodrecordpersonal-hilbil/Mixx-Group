@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220">
+  <g transform="translate(22 25)">
+    <path d="M16 20h136v94c0 29-29 46-68 58-39-12-68-29-68-58z" fill="#201a16"/>
+    <path d="M37 46h94M45 74h78" stroke="#d9a45f" stroke-width="5"/>
+    <text x="44" y="132" fill="#f3f0e8" font-family="Georgia,serif" font-size="57" font-weight="700">BG</text>
+  </g>
+  <text x="206" y="83" fill="#a35b38" font-family="Nimbus Sans,Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="9">BOURBON</text>
+  <text x="198" y="151" fill="#201a16" font-family="Georgia,serif" font-size="79" font-weight="700" letter-spacing="-3">GAMES</text>
+  <path d="M204 169H765" stroke="#d9a45f" stroke-width="4"/>
+  <text x="771" y="174" fill="#a35b38" font-family="Nimbus Sans,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">LIVE</text>
+</svg>

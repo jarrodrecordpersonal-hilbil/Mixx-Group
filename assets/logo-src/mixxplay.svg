@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220">
+  <g transform="translate(18 28)">
+    <circle cx="78" cy="82" r="68" fill="#332d78"/>
+    <path d="M62 48l55 34-55 34z" fill="#f3f0e8"/>
+    <path d="M30 82a48 48 0 0 1 73-41" fill="none" stroke="#ff6848" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="108" cy="45" r="7" fill="#f0c35a"/>
+  </g>
+  <text x="190" y="126" fill="#111612" font-family="Nimbus Sans,Arial,sans-serif" font-size="89" font-weight="900" letter-spacing="-6">MIXX</text>
+  <text x="430" y="111" fill="#332d78" font-family="Nimbus Sans,Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="8">PLAY</text>
+  <path d="M432 132H788" stroke="#6e5cff" stroke-width="4"/>
+  <circle cx="788" cy="132" r="7" fill="#ff6848"/>
+</svg>
