@@ -33,3 +33,11 @@
 .tank-asset.has-logo:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.22)}
 .tank-asset.has-logo .program-logo{display:block;width:min(100%,280px);height:98px;object-fit:contain;object-position:left center}
 .tank-asset.has-logo span{color:rgba(17,17,17,.65)}
+
+.tank-asset.has-logo .spirit-makers-logo{object-position:center center;margin-inline:auto}
+.tank-special{margin-top:1rem;padding:clamp(1.4rem,3vw,2.2rem);border:1px solid rgba(255,255,255,.16);border-radius:20px;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:2rem;align-items:center;background:linear-gradient(135deg,rgba(246,234,210,.98),rgba(255,255,255,.9));color:#111}
+.tank-special-mark{display:flex;flex-direction:column;gap:1rem}
+.tank-special-mark img{display:block;width:min(100%,300px);height:110px;object-fit:contain;object-position:left center}
+.tank-special h3{margin:0 0 .65rem;font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.6rem);line-height:1;letter-spacing:-.035em;font-weight:400}
+.tank-special p{margin:0;color:rgba(17,17,17,.68);line-height:1.55;max-width:650px}
+@media(max-width:700px){.tank-special{grid-template-columns:1fr;gap:1.25rem}.tank-special-mark img{height:90px}}
