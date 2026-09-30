@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220">
+  <g transform="translate(18 28)">
+    <circle cx="78" cy="82" r="68" fill="#111612"/>
+    <path d="M36 104V60l42 44 42-44v44" fill="none" stroke="#f3f0e8" stroke-width="13" stroke-linecap="square" stroke-linejoin="miter"/>
+    <circle cx="36" cy="44" r="7" fill="#ff6848"/><circle cx="78" cy="31" r="7" fill="#f0c35a"/><circle cx="120" cy="44" r="7" fill="#6e5cff"/>
+  </g>
+  <text x="190" y="126" fill="#111612" font-family="Nimbus Sans,Arial,sans-serif" font-size="89" font-weight="900" letter-spacing="-6">MIXX</text>
+  <text x="430" y="111" fill="#111612" font-family="Nimbus Sans,Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="8">GROUP</text>
+  <path d="M432 132H788" stroke="#111612" stroke-width="4"/>
+  <circle cx="788" cy="132" r="7" fill="#6e5cff"/>
+</svg>

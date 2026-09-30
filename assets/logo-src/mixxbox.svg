@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220">
+  <g transform="translate(18 28)">
+    <rect x="10" y="14" width="136" height="136" rx="30" fill="#111612"/>
+    <rect x="36" y="40" width="84" height="84" rx="15" fill="none" stroke="#f3f0e8" stroke-width="11"/>
+    <path d="M51 104V61l27 29 27-29v43" fill="none" stroke="#f0c35a" stroke-width="8" stroke-linecap="square"/>
+  </g>
+  <text x="190" y="126" fill="#111612" font-family="Nimbus Sans,Arial,sans-serif" font-size="89" font-weight="900" letter-spacing="-6">MIXX</text>
+  <text x="430" y="111" fill="#111612" font-family="Nimbus Sans,Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="8">BOX</text>
+  <path d="M432 132H788" stroke="#c9984f" stroke-width="4"/>
+  <rect x="780" y="124" width="16" height="16" rx="4" fill="#111612"/>
+</svg>

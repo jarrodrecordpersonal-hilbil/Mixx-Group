@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220">
+  <g transform="translate(22 24)">
+    <rect x="12" y="12" width="145" height="145" rx="73" fill="#201a16"/>
+    <path d="M48 49v27h18M48 121V94h18M121 49v27h-18M121 121V94h-18" fill="none" stroke="#d9a45f" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="84" cy="85" r="15" fill="#f3f0e8"/><circle cx="84" cy="45" r="6" fill="#ff6848"/><circle cx="124" cy="85" r="6" fill="#f0c35a"/><circle cx="84" cy="125" r="6" fill="#6e5cff"/><circle cx="44" cy="85" r="6" fill="#57d8ff"/>
+  </g>
+  <text x="205" y="84" fill="#a35b38" font-family="Nimbus Sans,Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="8">BOURBON GAMES PRESENTS</text>
+  <text x="200" y="151" fill="#201a16" font-family="Georgia,serif" font-size="71" font-weight="700" letter-spacing="-3">WHISKEY DRAFT</text>
+  <path d="M205 169H792" stroke="#d9a45f" stroke-width="4"/>
+</svg>
