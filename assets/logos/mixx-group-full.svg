@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="t d">
+<title id="t">MIXX Group full emblem</title><desc id="d">MIXX Group wordmark layered over a luminous gold network sphere.</desc>
+<defs><filter id="g"><feGaussianBlur stdDeviation="20"/></filter></defs>
+<rect width="1000" height="1000" fill="#050403"/>
+<circle cx="500" cy="510" r="380" fill="#7a4d18" opacity=".18" filter="url(#g)"/>
+<image href="mixx-group-sphere.svg" x="70" y="80" width="860" height="860"/>
+<rect x="115" y="390" width="770" height="255" rx="18" fill="#050403" opacity=".32"/>
+<image href="mixx-group-wordmark.svg" x="135" y="365" width="730" height="300"/>
+</svg>
