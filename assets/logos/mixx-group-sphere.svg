@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="t d">
+<title id="t">MIXX network sphere</title><desc id="d">A luminous gold sphere made from connected X-shaped nodes.</desc>
+<defs>
+  <radialGradient id="halo"><stop offset="0" stop-color="#b77b28" stop-opacity=".34"/><stop offset=".62" stop-color="#8b5a1e" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ebc773" stop-opacity=".18"/><stop offset=".5" stop-color="#f7d98f" stop-opacity=".72"/><stop offset="1" stop-color="#b77b28" stop-opacity=".2"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<circle cx="450" cy="450" r="420" fill="url(#halo)"/>
+<g fill="none" stroke="url(#line)" stroke-width="2">
+  <ellipse cx="450" cy="450" rx="330" ry="355"/><ellipse cx="450" cy="450" rx="250" ry="355"/><ellipse cx="450" cy="450" rx="150" ry="355"/>
+  <ellipse cx="450" cy="450" rx="355" ry="330" transform="rotate(90 450 450)"/>
+  <path d="M160 265L294 180 450 240 606 180 742 268 775 438 694 600 520 710 340 686 205 575 125 420z"/>
+  <path d="M204 576L300 438 160 265M300 438L450 240 606 180M300 438L520 710M300 438L742 268M450 240L694 600M606 180L775 438M160 265L742 268M125 420L775 438M205 575L694 600M340 686L520 710"/>
+</g>
+<g fill="#f4cf79" stroke="#f7df9d" stroke-width="3" filter="url(#glow)" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" text-anchor="middle">
+  <text x="160" y="276">X</text><text x="294" y="192">X</text><text x="450" y="252">X</text><text x="606" y="192">X</text><text x="742" y="280">X</text>
+  <text x="300" y="450">X</text><text x="600" y="450">X</text><text x="125" y="432">X</text><text x="775" y="450">X</text>
+  <text x="205" y="587">X</text><text x="694" y="612">X</text><text x="340" y="698">X</text><text x="520" y="722">X</text>
+</g>
+</svg>
