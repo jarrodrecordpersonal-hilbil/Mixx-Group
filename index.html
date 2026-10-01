@@ -5,21 +5,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="MIXX Group connects original programming, live formats, venue screens, at-home play and retail activation.">
   <title>MIXX Group · Stories that move into the real world</title>
-  <link rel="stylesheet" href="/assets/site.css?v=20260930d">
+  <link rel="stylesheet" href="/assets/site.css?v=20261001a">
   <style>
-    .cassette-hero{margin:0 0 28px}
-    .cassette-hero picture{display:block}
-    .hero-cassette{display:block;width:100%;height:auto}
-    .cassette-motion-toggle{display:block;margin:10px auto 0;padding:8px 13px;min-height:32px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);font:11px var(--sans);cursor:pointer}
-    .cassette-motion-toggle[hidden]{display:none}
-    .cassette-motion-toggle:hover{border-color:var(--ink);color:var(--ink)}
+    :root{--mixx-gold:#d7aa54;--mixx-ivory:#fffaf0;--mixx-night:#050403}
+    body{background:
+      radial-gradient(circle at 50% 10%,rgba(154,101,31,.14),transparent 32rem),
+      radial-gradient(circle at 50% 44%,rgba(112,74,25,.08),transparent 42rem),
+      var(--mixx-night)}
+    .group-mark img{display:block;width:188px;height:auto}
+    .home-hero{position:relative;overflow:hidden;isolation:isolate}
+    .home-hero::before{content:"";position:absolute;inset:-16% -8% -24% 36%;background:radial-gradient(circle,rgba(196,137,52,.16),transparent 58%);filter:blur(20px);z-index:-2}
+    .sphere-hero{position:relative;min-height:460px;display:grid;place-items:center;margin:-24px -30px -20px}
+    .sphere-hero::after{content:"";position:absolute;width:72%;aspect-ratio:1;border-radius:50%;box-shadow:0 0 90px rgba(213,158,71,.14),0 0 180px rgba(143,88,28,.10);pointer-events:none}
+    .hero-sphere{position:absolute;width:min(620px,92vw);opacity:.93;filter:drop-shadow(0 0 24px rgba(202,145,58,.18));animation:mixxOrbit 34s linear infinite}
+    .hero-wordmark{position:relative;width:min(660px,82vw);z-index:2;filter:drop-shadow(0 12px 32px rgba(0,0,0,.55))}
+    .network-line{background:linear-gradient(90deg,var(--mixx-gold),transparent)}
+    .system-hub{position:relative;overflow:hidden}
+    .system-hub::before{content:"";position:absolute;inset:-40%;background:url('/assets/logos/mixx-group-sphere.svg') center/72% no-repeat;opacity:.08;pointer-events:none}
+    @keyframes mixxOrbit{to{transform:rotate(360deg)}}
+    @media (prefers-reduced-motion:reduce){.hero-sphere{animation:none}}
+    @media (max-width:760px){.sphere-hero{min-height:350px;margin:-10px -16px 0}.hero-wordmark{width:88%}.hero-sphere{width:116%}}
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <div class="shell">
     <header class="site-header">
-      <a class="group-mark" href="/" aria-label="MIXX Group"><picture><source media="(prefers-reduced-motion: reduce)" srcset="/assets/logos/mixx-group.svg?v=cassette1#still"><img data-cassette-src="/assets/logos/mixx-group.svg?v=cassette1" src="/assets/logos/mixx-group.svg?v=cassette1" width="230" height="100" alt=""></picture></a>
+      <a class="group-mark" href="/" aria-label="MIXX Group"><img src="/assets/logos/mixx-group-wordmark.svg?v=sphere1" alt="MIXX Group"></a>
       <nav class="site-nav" aria-label="Main">
         <a href="#brands">The brands</a>
         <a href="#system">How it works</a>
@@ -30,9 +42,9 @@
       <section class="home-hero">
         <div><div class="kicker">An entertainment network built for the room</div><h1>Stories<br>that <em>move.</em></h1></div>
         <div class="hero-side">
-          <div class="cassette-hero">
-            <picture><source media="(prefers-reduced-motion: reduce)" srcset="/assets/logos/mixx-group.svg?v=cassette1#still"><img class="hero-cassette" data-cassette-src="/assets/logos/mixx-group.svg?v=cassette1" src="/assets/logos/mixx-group.svg?v=cassette1" width="230" height="100" alt="MIXX GROUP handwritten on a vintage cassette"></picture>
-            <button class="cassette-motion-toggle" type="button" aria-pressed="false" hidden>Pause logo</button>
+          <div class="sphere-hero" aria-label="MIXX Group connected network">
+            <img class="hero-sphere" src="/assets/logos/mixx-group-sphere.svg?v=sphere1" alt="" aria-hidden="true">
+            <img class="hero-wordmark" src="/assets/logos/mixx-group-wordmark.svg?v=sphere1" alt="MIXX Group">
           </div>
           <p>From the screen, into the room, and all the way home.</p><div class="network-line" aria-hidden="true"></div>
         </div>
@@ -64,31 +76,5 @@
     </main>
     <footer class="site-footer"><span>MIXX GROUP · Bourbon, Missouri</span><span>On screen. In the room. At home.</span></footer>
   </div>
-  <script>
-    (() => {
-      const toggle = document.querySelector('.cassette-motion-toggle');
-      const logos = document.querySelectorAll('[data-cassette-src]');
-      if (!toggle || !logos.length) return;
-      const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-      let manualChoice = null;
-      const isPaused = () => manualChoice === null ? preference.matches : manualChoice;
-      const apply = () => {
-        const paused = isPaused();
-        logos.forEach((image) => {
-          const src = image.dataset.cassetteSrc + (paused ? '#still' : '');
-          const source = image.closest('picture').querySelector('source');
-          if (source) source.srcset = src;
-          image.src = src;
-        });
-        toggle.textContent = paused ? 'Play logo' : 'Pause logo';
-        toggle.setAttribute('aria-pressed', String(paused));
-      };
-      toggle.addEventListener('click', () => { manualChoice = !isPaused(); apply(); });
-      if (preference.addEventListener) preference.addEventListener('change', apply);
-      else preference.addListener(apply);
-      apply();
-      toggle.hidden = false;
-    })();
-  </script>
 </body>
 </html>
