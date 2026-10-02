@@ -105,3 +105,13 @@
 .tank-youtube-card .door-link{color:#f1d99f}
 @media(max-width:850px){.site-header{height:88px;padding:0 18px}.group-mark{width:112px;height:76px}.channel-lockup{min-height:102px}.tank-youtube-card .discovery-copy{grid-column:1/-1}}
 @media(max-width:560px){.site-header{margin-top:8px;height:78px;padding:0 14px;border-radius:14px}.group-mark{width:92px;height:68px}.channel-lockup{padding:14px;gap:14px}.channel-divider{height:48px}.channel-tank-logo{width:44%}.channel-youtube-logo{width:48%}}
+
+/* Large standalone globe header */
+.site-header{height:170px;margin-top:0;padding:0 2px;border:0;border-radius:0;background:transparent;color:var(--ink)}
+.group-mark{width:166px;height:166px;overflow:visible;flex:0 0 auto}
+.group-mark .globe-group-logo{width:166px;height:166px;object-fit:cover;border-radius:50%;filter:drop-shadow(0 12px 22px rgba(17,22,18,.2))}
+.site-header .site-nav a{color:var(--ink)}
+.site-header .site-nav .nav-pill{border-color:rgba(17,22,18,.22);background:rgba(255,255,255,.35);color:var(--ink)}
+.site-header .site-nav .nav-pill:hover{background:var(--ink);color:#fff}
+@media(max-width:850px){.site-header{height:138px;padding:0}.group-mark,.group-mark .globe-group-logo{width:134px;height:134px}}
+@media(max-width:560px){.site-header{height:116px;margin-top:0;padding:0}.group-mark,.group-mark .globe-group-logo{width:112px;height:112px}.site-nav{gap:12px}.site-nav .nav-pill{padding:9px 12px}}
