@@ -118,3 +118,10 @@
 
 /* Transparent globe: no black field */
 .group-mark .globe-group-logo{object-fit:contain;border-radius:0;filter:drop-shadow(0 1px 1px rgba(17,22,18,.5)) drop-shadow(0 12px 22px rgba(17,22,18,.16))}
+
+/* Scale transparent globe for legibility */
+.site-header{height:210px}
+.group-mark,.group-mark .globe-group-logo{width:210px;height:210px}
+.group-mark .globe-group-logo{filter:drop-shadow(0 0 1px rgba(17,22,18,.62)) drop-shadow(0 14px 24px rgba(17,22,18,.14))}
+@media(max-width:850px){.site-header{height:160px}.group-mark,.group-mark .globe-group-logo{width:158px;height:158px}}
+@media(max-width:560px){.site-header{height:128px}.group-mark,.group-mark .globe-group-logo{width:126px;height:126px}}
