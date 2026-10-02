@@ -1,0 +1,26 @@
+body.group-home-dark{background:
+radial-gradient(circle at 8% 4%,rgba(212,170,85,.14),transparent 25%),
+radial-gradient(circle at 90% 30%,rgba(102,87,255,.14),transparent 34%),
+linear-gradient(180deg,#121117 0%,#18131d 48%,#101116 100%);color:#f4efe5}
+.group-home-dark .site-header{color:#f4efe5}
+.group-home-dark .site-header .site-nav a{color:rgba(244,239,229,.82)}
+.group-home-dark .site-header .site-nav .nav-pill{border-color:rgba(244,239,229,.24);background:rgba(255,255,255,.035);color:#f4efe5}
+.group-home-dark .site-header .site-nav .nav-pill:hover{background:#f4efe5;color:#141218}
+.group-home-dark .group-mark .globe-group-logo{filter:drop-shadow(0 0 1px rgba(255,255,255,.72)) drop-shadow(0 16px 30px rgba(0,0,0,.34))}
+.group-home-dark .kicker{color:#c9a75f}
+.group-home-dark .home-hero h1{color:#f6f0e6}
+.group-home-dark .home-hero h1 em{color:#d8b568}
+.group-home-dark .hero-side p{color:#eee5d8}
+.group-home-dark .network-line{box-shadow:0 0 26px rgba(105,96,255,.22)}
+.group-home-dark .brand-section,.group-home-dark .system-section{border-color:rgba(244,239,229,.15)}
+.group-home-dark .section-head p,.group-home-dark .system-heading p{color:rgba(244,239,229,.57)}
+.group-home-dark .group-tentpole{border:1px solid rgba(244,239,229,.1)}
+.group-home-dark .system-heading h2{color:#f6f0e6}
+.group-home-dark .system-heading h2 em{color:#d8b568}
+.group-home-dark .system-hub{background:#1b1b21;border:1px solid rgba(244,239,229,.12);border-bottom:0}
+.group-home-dark .system-hub p{color:rgba(244,239,229,.62)}
+.group-home-dark .return-loop{border-color:rgba(244,239,229,.18);background:rgba(255,255,255,.025);color:#eee7dc}
+.group-home-dark .return-loop b{color:#9e91ff}
+.group-home-dark .platform{background:#0b0d0d;border:1px solid rgba(244,239,229,.13);box-shadow:0 28px 70px rgba(0,0,0,.22)}
+.group-home-dark .site-footer{border-color:rgba(244,239,229,.15);color:rgba(244,239,229,.46)}
+@media(max-width:560px){body.group-home-dark{background:radial-gradient(circle at 0 0,rgba(212,170,85,.13),transparent 22%),#121117}}
