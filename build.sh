@@ -2,4 +2,4 @@
 set -eu
 mkdir -p public
 cp index.html public/
-cp -R assets bourbon-games-live mixx-tank mixxvibe mixxbox mixxplay public/
+cp -R assets bourbon-games-live mixx-tank mixxvibe mixxbox mixxplay sunday-pours public/
