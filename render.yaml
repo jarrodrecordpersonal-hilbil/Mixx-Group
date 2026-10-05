@@ -2,5 +2,5 @@ services:
   - type: web
     name: mixxgroup
     runtime: static
-    buildCommand: sh build.sh && cp -R shows community mixx-wave mixx-bench mixx-measure sway partners about public/ && cp robots.txt public/
+    buildCommand: sh build.sh && cp -R shows community mixx-wave mixx-bench mixx-measure sway partners about public/ && cp robots.txt sitemap.xml public/
     staticPublishPath: ./public
