@@ -13,3 +13,24 @@ jobs:
           node-version: 22
       - name: Verify public routes, metadata and internal links
         run: node scripts/verify-site.mjs
+      - name: Build Render publish directory
+        run: sh build.sh
+      - name: Verify generated publish output
+        run: |
+          test -f public/index.html
+          test -f public/robots.txt
+          test -f public/sitemap.xml
+          test -f public/shows/index.html
+          test -f public/community/index.html
+          test -f public/mixx-tank/index.html
+          test -f public/mixx-wave/index.html
+          test -f public/mixx-bench/index.html
+          test -f public/mixx-measure/index.html
+          test -f public/sway/index.html
+          test -f public/partners/index.html
+          test -f public/about/index.html
+          test -f public/sunday-pours/index.html
+          test -f public/bourbon-games-live/index.html
+          test -f public/mixxvibe/index.html
+          test -f public/mixxbox/index.html
+          test -f public/mixxplay/index.html
