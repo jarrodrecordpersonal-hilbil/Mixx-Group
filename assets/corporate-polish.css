@@ -15,4 +15,4 @@
 .partner-grid article a{display:inline-flex;margin-top:22px;font-weight:800;color:#e7e4dc}
 .metric-note{display:block;margin-top:14px;color:#827f79;font-size:.78rem;line-height:1.6}
 @media(max-width:1000px){.hero-lockup{align-items:flex-start;flex-direction:column}.hero-lockup .brand-mark{max-width:280px}.closing-band .shell{align-items:flex-start;flex-direction:column}}
-@media(max-width:650px){.hero-lockup{gap:24px}.hero-lockup .brand-mark{max-width:220px}.property-card{min-height:230px}.closing-band{padding:56px 0}.closing-band h2{font-size:2.65rem}}
+@media(max-width:650px){.hero-lockup{gap:24px}.hero-lockup .brand-mark{max-width:220px}.property-card{min-height:230px}.closing-band{padding:56px 0}.closing-band h2{font-size:2.65rem}}.skip-link{position:fixed;left:14px;top:12px;z-index:999;background:#fff;color:#000;padding:10px 14px;border-radius:999px;font-size:.78rem;font-weight:900;transform:translateY(-160%);transition:transform .18s ease}.skip-link:focus{transform:translateY(0)}
