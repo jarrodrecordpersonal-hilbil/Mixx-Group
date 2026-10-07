@@ -1,0 +1,25 @@
+/* Homepage only. Original logo files stay unchanged: no filters, redraws or recoloring. */
+.portfolio-grid{gap:16px}
+.property{aspect-ratio:1.38;min-height:260px;border-radius:8px;background:var(--tile)}
+.property .tile-mark{min-height:150px;justify-content:center;padding:16px 0;flex:1}
+.property .logo-heading{display:flex;align-items:center;justify-content:center;width:100%;height:150px;margin:0;line-height:1}
+.property .tile-logo{display:block;width:100%;height:100%;max-width:100%;max-height:150px;object-fit:contain;object-position:center;filter:none}
+.property.tank .logo-heading{max-width:205px}
+.property.wave .logo-heading,.property.vibe .logo-heading{max-width:310px}
+.property.games .logo-heading{max-width:260px}
+.property.barrel .logo-heading{max-width:275px}
+.property.sunday .logo-heading{max-width:290px}
+.property.sway .logo-heading{max-width:310px}
+/* Light brand-color fields keep the original dark marks readable. */
+.property.tank{--tile:#eee6d7;--tile-ink:#272621}
+.property.wave{--tile:#d9ebed;--tile-ink:#132c31}
+.property.sway{--tile:#dfdaf0;--tile-ink:#2b243e}
+.property.games{--tile:#f0d1a4;--tile-ink:#31281b}
+.property.barrel{--tile:#d9c6a7;--tile-ink:#33271d;border-color:transparent}
+.property.vibe{--tile:#e4b6c2;--tile-ink:#382933}
+.property.sunday{--tile:#dce6d4;--tile-ink:#214d3d;border-color:transparent}
+.property.benchpacking{--tile:#becdb0;--tile-ink:#303e2b}
+.property.maison{--tile:#f4efe5;--tile-ink:#183d32}
+@media(max-width:1050px){.property{aspect-ratio:auto;min-height:260px}}
+@media(max-width:600px){.property{min-height:246px}.property .tile-mark{min-height:145px;padding:12px 0}.property .logo-heading{height:135px}.property .tile-logo{max-height:135px}.property.tank .logo-heading{max-width:190px}.property.games .logo-heading{max-width:245px}}
+@media print{.property{break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
