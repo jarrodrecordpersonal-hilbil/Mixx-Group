@@ -1,0 +1,82 @@
+/* Tactile portfolio panels. Keep the approved grid, colors and original artwork.
+   CSS-only interaction: every card remains a normal, single-tap link. */
+.portfolio-grid .property{
+  --panel-ease:cubic-bezier(.22,.68,0,1);
+  isolation:isolate;
+  overflow:hidden;
+  transform-origin:center center;
+  transform:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 1px 2px rgba(0,0,0,.12);
+  transition:transform 380ms var(--panel-ease),box-shadow 380ms var(--panel-ease);
+}
+/* Light on matte paper, rather than photographs competing with the logos. */
+.portfolio-grid .property::before,
+.portfolio-grid .property::after{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;border-radius:inherit;
+}
+.portfolio-grid .property::before{
+  background:radial-gradient(ellipse at 14% 6%,rgba(255,255,255,.56),transparent 62%),linear-gradient(150deg,rgba(255,255,255,.05) 35%,rgba(0,0,0,.10));
+  opacity:.42;
+  transition:opacity 460ms var(--panel-ease);
+}
+.portfolio-grid .property::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath d='M0 0h160v160H0z' filter='url(%23g)' opacity='.65'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+  opacity:.09;
+  mix-blend-mode:multiply;
+}
+.portfolio-grid .tile-top,
+.portfolio-grid .tile-mark,
+.portfolio-grid .tile-copy{position:relative;z-index:1}
+.portfolio-grid .tile-mark,
+.portfolio-grid .tile-copy{transition:transform 380ms var(--panel-ease)}
+.portfolio-grid .tile-reveal{
+  position:absolute;z-index:1;left:25px;right:25px;bottom:14px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-size:10px;line-height:16px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  opacity:0;transform:translateY(12px);pointer-events:none;
+  transition:opacity 240ms ease,transform 380ms var(--panel-ease);
+}
+.portfolio-grid .tile-reveal .reveal-arrow{font-size:18px;font-weight:400;letter-spacing:0}
+.portfolio-grid .arrow{transition:transform 380ms var(--panel-ease)}
+/* Cancel the older hover lift on touch screens: one tap always navigates. */
+.portfolio-grid .property:hover{transform:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 1px 2px rgba(0,0,0,.12)}
+.portfolio-grid .property:hover .arrow{transform:none}
+@media(hover:hover) and (pointer:fine){
+  .portfolio-grid .property:hover{
+    z-index:3;transform:translateY(-4px) scale(1.015);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 14px 32px rgba(0,0,0,.26),0 0 0 1px var(--tile),0 0 24px -17px var(--tile);
+  }
+  .portfolio-grid .property:hover::before{opacity:.82}
+  .portfolio-grid .property:hover .tile-mark{transform:translateY(-12px)}
+  .portfolio-grid .property:hover .tile-copy{transform:translateY(-18px)}
+  .portfolio-grid .property:hover .tile-reveal{opacity:1;transform:translateY(0)}
+  .portfolio-grid .property:hover .arrow{transform:translate(2px,-2px)}
+}
+/* Keyboard gets the same opening cue, with a visible focus ring. */
+.portfolio-grid .property:focus-visible{
+  z-index:3;outline:3px solid #f7f4ed;outline-offset:4px;
+  transform:translateY(-4px) scale(1.015);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 14px 32px rgba(0,0,0,.26);
+}
+.portfolio-grid .property:focus-visible::before{opacity:.82}
+.portfolio-grid .property:focus-visible .tile-mark{transform:translateY(-12px)}
+.portfolio-grid .property:focus-visible .tile-copy{transform:translateY(-18px)}
+.portfolio-grid .property:focus-visible .tile-reveal{opacity:1;transform:translateY(0)}
+.portfolio-grid .property:focus-visible .arrow{transform:translate(2px,-2px)}
+@media(max-width:600px){.portfolio-grid .tile-reveal{left:23px;right:23px;bottom:12px}}
+/* No continuous animation, and no motion for visitors who request less. */
+@media(prefers-reduced-motion:reduce){
+  .portfolio-grid .property,
+  .portfolio-grid .property::before,
+  .portfolio-grid .property::after,
+  .portfolio-grid .property .tile-mark,
+  .portfolio-grid .property .tile-copy,
+  .portfolio-grid .property .arrow,
+  .portfolio-grid .property .tile-reveal{transition:none!important;transform:none!important}
+  .portfolio-grid .tile-reveal{display:none}
+}
+@media print{
+  .portfolio-grid .property::before,.portfolio-grid .property::after,.portfolio-grid .tile-reveal{display:none}
+  .portfolio-grid .property,.portfolio-grid .tile-mark,.portfolio-grid .tile-copy{transform:none!important;box-shadow:none!important}
+}
