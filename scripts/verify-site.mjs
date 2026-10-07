@@ -18,16 +18,17 @@ const pages=[
   ["mixxvibe/index.html","/mixxvibe/"],
   ["mixxbox/index.html","/mixxbox/"],
   ["mixxplay/index.html","/mixxplay/"],
+  ["maison-cedro/index.html","/maison-cedro/"],
+  ["barrel-run/index.html","/barrel-run/"],
+  ["benchpacking/index.html","/benchpacking/"],
 ];
 const errors=[];
 const text=(p)=>fs.readFileSync(path.join(root,p),"utf8");
 const existsRoute=(href)=>{
-  if(href==="/"||href.startsWith("/assets/")) return true;
   const clean=href.split("#")[0].split("?")[0];
-  if(!clean) return true;
+  if(!clean||clean==="/") return true;
   const rel=clean.replace(/^\//,"").replace(/\/$/,"");
-  if(!rel) return true;
-  return fs.existsSync(path.join(root,rel))||fs.existsSync(path.join(root,rel,"index.html"))||fs.existsSync(path.join(root,rel));
+  return fs.existsSync(path.join(root,rel))||fs.existsSync(path.join(root,rel,"index.html"));
 };
 for(const [file,route] of pages){
   if(!fs.existsSync(path.join(root,file))){errors.push(`${file}: missing page`);continue;}
@@ -48,6 +49,19 @@ for(const [file,route] of pages){
   if(/MIXDATA/.test(c)) errors.push(`${file}: stale MIXDATA naming`);
   if(route!=="/"&&!c.includes(`https://mixxgroup.com${route}`)) errors.push(`${file}: canonical/url does not match ${route}`);
 }
+const home=text("index.html");
+const propertyRoutes=["/mixx-tank/","/mixx-wave/","/sway/","/bourbon-games-live/","/barrel-run/","/mixxvibe/","/sunday-pours/","/benchpacking/","/maison-cedro/"];
+const propertyLinks=[...home.matchAll(/<a\b[^>]*class="property [^"]+"[^>]*href="([^"]+)"/g)].map(m=>m[1]);
+for(const route of propertyRoutes){
+  if(propertyLinks.filter(x=>x===route).length!==1) errors.push(`index.html: expected one property tile for ${route}`);
+}
+if(propertyLinks.length!==propertyRoutes.length) errors.push("index.html: unexpected property tile count");
+for(const anchor of ["properties","brands","portfolio","system"]){
+  if(!home.includes(`id="${anchor}"`)) errors.push(`index.html: missing navigation anchor ${anchor}`);
+}
+for(const m of home.matchAll(/<img\b[^>]*src="([^"]+)"/g)){
+  if(m[1].startsWith("/")&&!existsRoute(m[1])) errors.push(`index.html: missing image ${m[1]}`);
+}
 const sitemap=text("sitemap.xml");
 for(const [,route] of pages){
   const url=`https://mixxgroup.com${route}`;
@@ -59,4 +73,4 @@ if(errors.length){
   console.error("MIXX Group site QA failed:\n- "+errors.join("\n- "));
   process.exit(1);
 }
-console.log(`MIXX Group site QA passed for ${pages.length} public routes.`);
+console.log(`MIXX Group site QA passed for ${pages.length} public routes and ${propertyRoutes.length} property tiles.`);
