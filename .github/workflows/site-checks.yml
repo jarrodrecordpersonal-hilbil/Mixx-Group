@@ -11,26 +11,23 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Build Render publish directory with verified original artwork
+        run: sh build.sh
       - name: Verify public routes, metadata and internal links
         run: node scripts/verify-site.mjs
-      - name: Build Render publish directory
-        run: sh build.sh
       - name: Verify generated publish output
         run: |
           test -f public/index.html
           test -f public/robots.txt
           test -f public/sitemap.xml
-          test -f public/shows/index.html
-          test -f public/community/index.html
-          test -f public/mixx-tank/index.html
-          test -f public/mixx-wave/index.html
-          test -f public/mixx-bench/index.html
-          test -f public/mixx-measure/index.html
-          test -f public/sway/index.html
-          test -f public/partners/index.html
-          test -f public/about/index.html
-          test -f public/sunday-pours/index.html
-          test -f public/bourbon-games-live/index.html
-          test -f public/mixxvibe/index.html
-          test -f public/mixxbox/index.html
-          test -f public/mixxplay/index.html
+          for route in shows community mixx-tank mixx-wave mixx-bench mixx-measure sway partners about sunday-pours bourbon-games-live mixxvibe mixxbox mixxplay maison-cedro barrel-run benchpacking; do
+            test -f "public/$route/index.html"
+          done
+          test -s public/assets/logos/sway-irl.png
+      - name: Retain exact build for visual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: mixx-group-verified-site
+          path: public/
+          retention-days: 3
+          if-no-files-found: error
