@@ -1,0 +1,10 @@
+{
+  "release": "portfolio-studio-1",
+  "designSourceCommit": "57dcdf8c23a29ccf38108fe454c006dc3c9179e4",
+  "homepage": "property-mosaic",
+  "propertyCount": 9,
+  "originalPropertyLogoCount": 7,
+  "backgroundTreatment": "matte-color-with-studio-texture",
+  "interaction": "subtle-hover-reveal",
+  "photoBackgroundsIncluded": false
+}
