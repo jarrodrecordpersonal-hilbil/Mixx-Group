@@ -1,10 +1,15 @@
 {
-  "release": "portfolio-studio-1",
-  "designSourceCommit": "57dcdf8c23a29ccf38108fe454c006dc3c9179e4",
+  "release": "portfolio-atmosphere-1",
+  "previousRelease": "portfolio-studio-1",
   "homepage": "property-mosaic",
   "propertyCount": 9,
   "originalPropertyLogoCount": 7,
-  "backgroundTreatment": "matte-color-with-studio-texture",
-  "interaction": "subtle-hover-reveal",
-  "photoBackgroundsIncluded": false
+  "originalArtworkUnchanged": true,
+  "backgroundTreatment": "self-hosted-environments-under-original-color-fields",
+  "interaction": "subtle-hover-reveal-with-photo-depth",
+  "photoBackgroundsIncluded": true,
+  "environmentImageCount": 9,
+  "environmentSources": "/assets/environments/sources.json",
+  "developedPages": ["/mixx-tank/", "/mixx-wave/"],
+  "note": "Some environments are illustrative, not claims of current customer installations, equipment or inventory. Deployment status is not asserted by this file."
 }
