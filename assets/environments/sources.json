@@ -1,0 +1,89 @@
+{
+  "note": "Original logos are unchanged. Some environments are illustrative and are not claims of live installations, branded equipment or tobacco inventory.",
+  "images": [
+    {
+      "property": "tank",
+      "file": "tank.webp",
+      "kind": "supplied-media",
+      "source": "Production photograph extracted from the supplied BK_Deck 2.pdf, page 10.",
+      "sha256": "0377c255fb3e1ac507e3b92ad9cd754d95e606332959c7b89a3028ec5beefb02",
+      "bytes": 12946
+    },
+    {
+      "property": "wave",
+      "file": "wave.webp",
+      "kind": "supplied-media",
+      "source": "Barrel Run 2026 Summer Edition.mp4, 620 seconds. A bar setting; not a MIXXWAVE installation case study.",
+      "sha256": "0d8414c14cb8b1b36b92ae5116819c1c259806e60a9ec2996faa7fd9837afd65",
+      "bytes": 13310
+    },
+    {
+      "property": "barrel",
+      "file": "barrel.webp",
+      "kind": "supplied-media",
+      "source": "Barrel Run 2026 Summer Edition.mp4, 510 seconds. Distillery barrel storage.",
+      "sha256": "cd30fdcaea3642e20c9f04c9058755c47a70178bf9b3d9b510bccf07eeab8e8e",
+      "bytes": 6684
+    },
+    {
+      "property": "sunday",
+      "file": "sunday.webp",
+      "kind": "supplied-media",
+      "source": "Golf still from MixxTank Q4 Marketing Plan.pdf, page 10. Cropped from the pilot stills; no slide text included.",
+      "sha256": "d2fa194a021e6430059cc5a62b28130a629e737527b7918eb2fa44fbdb25844e",
+      "bytes": 10070
+    },
+    {
+      "property": "games",
+      "file": "games.webp",
+      "kind": "supplied-media",
+      "source": "Alternate crop of the supplied production photograph. Setting illustration, not a named Bourbon Games episode.",
+      "sha256": "9ecc3844394eaf802b36ecfa4bfe7d3af198b0b992d2091116b635da12a34f9f",
+      "bytes": 8826
+    },
+    {
+      "property": "vibe",
+      "file": "vibe.webp",
+      "kind": "unsplash-illustrative",
+      "credit": "Alice Kotlyarenko",
+      "source": "https://unsplash.com/photos/nOyJzEmlRz4",
+      "license": "https://unsplash.com/license",
+      "source_sha256": "fdab9e57d3f038c67736a739fcc03c39522e4438219c57d8d84b12b4bec63e3d",
+      "sha256": "25571a589c2a6ea51d5bb44269bcc3ac27ce81e0ce0516550a49e8ffc42e0ff8",
+      "bytes": 43212
+    },
+    {
+      "property": "benchpacking",
+      "file": "benchpacking.webp",
+      "kind": "unsplash-illustrative",
+      "credit": "Todd Jiang",
+      "source": "https://unsplash.com/photos/AMTW6c97EvE",
+      "license": "https://unsplash.com/license",
+      "source_sha256": "58d01b6c51ec66c03116e5fd1dcbf4d65ab136435d04783ed6ecf29ebb3fc289",
+      "sha256": "299b8d66eb2a13319b8ccd5a319e036ad10c066faf80ebea2ded64588c985ca2",
+      "bytes": 208354
+    },
+    {
+      "property": "maison",
+      "file": "maison.webp",
+      "kind": "unsplash-illustrative",
+      "credit": "Considerate Agency",
+      "source": "https://unsplash.com/photos/ZWxKxRcxaas",
+      "license": "https://unsplash.com/license",
+      "source_sha256": "8f03ce8ccf4dedd4524c789f234e1e35c127a8a8c67936b6a3aa5c6f090f8714",
+      "sha256": "8925b359ca28e27fc206e48b4f719df3ab116a8c03aa297ad52a3a9194280f1f",
+      "bytes": 61056
+    },
+    {
+      "property": "sway",
+      "file": "sway.webp",
+      "kind": "existing-concept-illustration",
+      "credit": "Existing SWAY IRL project artwork",
+      "source": "SwayIRL.com/public/retail-scene.png at ad18b3c",
+      "license": "Existing user project asset",
+      "source_sha256": "f13dd2adf109fc0ba3f09796d70cb38c65d09345d4b9f3d0a0013070aab02e1c",
+      "sha256": "884514da51ac2ea4b49c8fca80657f31be0dfaa7577bd24a9a245b2b574cb20c",
+      "bytes": 129586
+    }
+  ]
+}
