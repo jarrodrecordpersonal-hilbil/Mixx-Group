@@ -1,0 +1,23 @@
+/* Photo layer only: preserve the approved grid, palette, original logos and links. */
+.portfolio-grid .tank{--scene:url('/assets/environments/tank.webp');--scene-position:45% center}
+.portfolio-grid .wave{--scene:url('/assets/environments/wave.webp');--scene-position:center}
+.portfolio-grid .sway{--scene:url('/assets/environments/sway.webp');--scene-position:62% center}
+.portfolio-grid .games{--scene:url('/assets/environments/games.webp');--scene-position:center}
+.portfolio-grid .barrel{--scene:url('/assets/environments/barrel.webp');--scene-position:35% center}
+.portfolio-grid .vibe{--scene:url('/assets/environments/vibe.webp');--scene-position:center}
+.portfolio-grid .sunday{--scene:url('/assets/environments/sunday.webp');--scene-position:60% center}
+.portfolio-grid .benchpacking{--scene:url('/assets/environments/benchpacking.webp');--scene-position:50% 87%}
+.portfolio-grid .maison{--scene:url('/assets/environments/maison.webp');--scene-position:center}
+.portfolio-grid .property::before{background-image:var(--scene);background-size:cover;background-position:var(--scene-position,center);opacity:.27;filter:saturate(.7);transform:scale(1);transition:opacity 480ms ease,transform 900ms cubic-bezier(.22,.68,0,1);mask-image:linear-gradient(#000 0%,#000a 35%,#0008 66%,#000 100%)}
+.portfolio-grid .property::after{opacity:.06}
+.portfolio-grid .tile-mark{background:radial-gradient(ellipse at center,color-mix(in srgb,var(--tile) 62%,transparent),transparent 76%)}
+.portfolio-grid .property:focus-visible::before{opacity:.48;transform:scale(1.035)}
+@media(hover:hover) and (pointer:fine){.portfolio-grid .property:hover::before{opacity:.48;transform:scale(1.035)}}
+@media(hover:none){.portfolio-grid .property::before{opacity:.32}.portfolio-grid .property:hover::before{opacity:.32;transform:none}}
+@media(prefers-reduced-motion:reduce){.portfolio-grid .property::before{transition:none!important;transform:none!important}}
+.imagery-note{font-size:11px;line-height:1.7;color:var(--muted);margin:-23px 0 32px;max-width:850px}
+.imagery-note summary{cursor:pointer;width:max-content;padding:8px 0;text-underline-offset:4px}
+.imagery-note summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.imagery-note p{margin:8px 0}.imagery-note a{color:inherit}
+@media(max-width:600px){.imagery-note{margin-top:-14px}}
+@media print{.portfolio-grid .property::before,.imagery-note{display:none}}
