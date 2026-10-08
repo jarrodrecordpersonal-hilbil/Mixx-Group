@@ -1,11 +1,14 @@
 name: MIXX Group site checks
 on:
   push:
-    branches: [main]
+    branches: [main, design/atmosphere-and-property-pages-20261008]
   pull_request:
+permissions:
+  contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -15,6 +18,8 @@ jobs:
         run: sh build.sh
       - name: Verify public routes, metadata and internal links
         run: node scripts/verify-site.mjs
+      - name: Verify atmosphere sources, original logos and developed pages
+        run: node scripts/verify-atmosphere.mjs
       - name: Verify generated publish output
         run: |
           test -f public/index.html
@@ -24,6 +29,9 @@ jobs:
             test -f "public/$route/index.html"
           done
           test -s public/assets/logos/sway-irl.png
+          test -s public/assets/environments/sources.json
+          test -s public/assets/portfolio-atmosphere.css
+          test -s public/assets/property-pages.css
       - name: Retain exact build for visual review
         uses: actions/upload-artifact@v4
         with:
