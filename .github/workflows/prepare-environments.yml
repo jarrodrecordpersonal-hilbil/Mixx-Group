@@ -1,0 +1,53 @@
+name: Prepare property environments
+on:
+  push:
+    branches: [design/atmosphere-and-property-pages-20261008]
+    paths:
+      - scripts/prepare-environments.py
+      - scripts/source-photos/**
+      - .github/workflows/prepare-environments.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: prepare-property-environments
+  cancel-in-progress: false
+jobs:
+  prepare:
+    if: github.ref == 'refs/heads/design/atmosphere-and-property-pages-20261008'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned image encoder
+        run: python -m pip install Pillow==11.3.0
+      - name: Prepare bounded, attributed images
+        run: python scripts/prepare-environments.py
+      - name: Commit only prepared artwork
+        env:
+          BRANCH: design/atmosphere-and-property-pages-20261008
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/environments/ assets/logos/sway-irl.png
+          if ! git diff --cached --quiet; then
+            git commit -m 'Bundle optimized property environments and original SWAY logo'
+            git pull --rebase origin "$BRANCH"
+            git push origin "HEAD:$BRANCH"
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the self-hosted site
+        run: sh build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atmosphere-prepared-site
+          path: public/
+          retention-days: 3
+          if-no-files-found: error
