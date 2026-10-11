@@ -3,12 +3,15 @@ import assert from 'node:assert/strict';
 
 // Presentation-only focus mode. Existing routes, applications and original artwork
 // remain intact. Rebuild with SWAY_FOCUS=0 to restore the full portfolio chooser.
+// --verify compares the published output without modifying any file.
 const file = 'public/index.html';
+const verify = process.argv.includes('--verify');
 if (process.env.SWAY_FOCUS === '0') {
+  if (verify) assert.equal(fs.readFileSync(file, 'utf8'), fs.readFileSync('index.html', 'utf8'), 'Unfocused published page differs from source.');
   console.log('SWAY focus disabled; original portfolio preserved.');
   process.exit(0);
 }
-let html = fs.readFileSync(file, 'utf8');
+let html = fs.readFileSync(verify ? 'index.html' : file, 'utf8');
 assert(!html.includes('id="sway-focus-style"'), 'Build must start from the original index.');
 let held = 0;
 let active = 0;
@@ -52,6 +55,12 @@ assert(tiles.find(t => /\shref=/.test(t)).includes('href="/sway/"'));
 assert.equal(tiles.filter(t => t.includes('aria-disabled="true"') && t.includes('tabindex="-1"') && !/\shref=/.test(t)).length, 8);
 assert.equal((html.match(/class="focus-status"/g) || []).length, 8);
 assert(html.includes('href="/about/"') && html.includes('href="/partners/"'));
-fs.writeFileSync(file, html);
-fs.writeFileSync('public/focus-status.json', JSON.stringify({release:'sway-focus-20261011',activeProperty:'SWAY IRL',heldPropertyTiles:8,scope:'homepage property navigation only; underlying routes and apps preserved'}, null, 2) + '\n');
+const status = {release:'sway-focus-20261011',activeProperty:'SWAY IRL',heldPropertyTiles:8,scope:'homepage property navigation only; underlying routes and apps preserved'};
+if (verify) {
+  assert.equal(fs.readFileSync(file, 'utf8'), html, 'Published focus page differs from the expected source transformation.');
+  assert.deepEqual(JSON.parse(fs.readFileSync('public/focus-status.json', 'utf8')), status, 'Focus status does not match the published configuration.');
+} else {
+  fs.writeFileSync(file, html);
+  fs.writeFileSync('public/focus-status.json', JSON.stringify(status, null, 2) + '\n');
+}
 console.log('SWAY focus verified: 1 active tile, 8 red-tinted disabled tiles, original routes preserved.');
