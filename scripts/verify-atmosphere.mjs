@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {execFileSync} from 'node:child_process';
 
 const root=process.cwd();
 const errors=[];
@@ -57,7 +58,17 @@ for(const file of pages){
     }
   }
   expect(!/<form\b|\bautoplay\b/i.test(html),`${file}: unrequested form or autoplay.`);
-  expect(fs.readFileSync(path.join(root,'public',file),'utf8')===html,`${file}: published HTML differs from source.`);
+  if(file==='index.html' && process.env.SWAY_FOCUS!=='0'){
+    // Compare every byte with the expected, asserted transformation, rather
+    // than skipping source-integrity verification for the homepage.
+    try {
+      execFileSync(process.execPath, ['scripts/apply-sway-focus.mjs', '--verify'], {cwd:root,stdio:'pipe'});
+    } catch(error) {
+      errors.push(`${file}: focus output verification failed: ${error.stderr?.toString() || error.message}`);
+    }
+  } else {
+    expect(fs.readFileSync(path.join(root,'public',file),'utf8')===html,`${file}: published HTML differs from source.`);
+  }
 }
 expect(text('index.html').includes('/assets/portfolio-atmosphere.css?v=field-1'),'Homepage is not using the environment stylesheet.');
 expect(css.includes('prefers-reduced-motion:reduce')&&css.includes('hover:none'),'Missing reduced-motion or touch behavior.');
